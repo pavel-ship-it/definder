@@ -19,12 +19,7 @@ struct PathView: View {
                 decomposedPath = decomposedPath.deletingLastPathComponent()
                 pathComponents.append((decomposedPath.lastPathComponent, decomposedPath))
             } while decomposedPath.lastPathComponent != "/"
-//            while decomposedPath.lastPathComponent != ".." {
-//                decomposedPath = decomposedPath.deletingLastPathComponent()
-//                pathComponents.append((decomposedPath.lastPathComponent, decomposedPath))
-//            }
             return pathComponents.reversed()
-//            return path.pathComponents
         }
         return [(path.absoluteString, path)]
     }

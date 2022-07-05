@@ -24,7 +24,6 @@
 		0CB104A7286C551000B49412 /* FolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderView.swift; sourceTree = "<group>"; };
 		0CB104A9286C551200B49412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CB104AC286C551200B49412 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0CB104AE286C551200B49412 /* Definder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Definder.entitlements; sourceTree = "<group>"; };
 		0CB88BD428724A3C0096C1B9 /* VolumesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumesListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +63,6 @@
 				0CB88BD428724A3C0096C1B9 /* VolumesListView.swift */,
 				0C5FE2C5286D138000EEB7E1 /* IconService.swift */,
 				0CB104A9286C551200B49412 /* Assets.xcassets */,
-				0CB104AE286C551200B49412 /* Definder.entitlements */,
 				0CB104AB286C551200B49412 /* Preview Content */,
 			);
 			path = Definder;
@@ -277,12 +275,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Definder/Definder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Definder/Preview Content\"";
-				DEVELOPMENT_TEAM = QX5CR2FTN2;
+				DEVELOPMENT_TEAM = 2AKR9MJ4WY;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -304,12 +301,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Definder/Definder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Definder/Preview Content\"";
-				DEVELOPMENT_TEAM = QX5CR2FTN2;
+				DEVELOPMENT_TEAM = 2AKR9MJ4WY;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
