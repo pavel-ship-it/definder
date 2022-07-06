@@ -45,7 +45,11 @@ struct FolderView: View {
     let fileManager = FileManager.default
     
     @State private var path: URL = FileManager.default.homeDirectoryForCurrentUser
-    @State private var selection = Set<ListableFile>()
+    @State private var selection = Set<ListableFile>() {
+        didSet {
+            print(selection)
+        }
+    }
     @State private var listOfFiles = [ListableFile]()
 
     func refreshFiles() {
@@ -70,10 +74,13 @@ struct FolderView: View {
                     item.icon
                     Text(item.title)
                 }
-                .onTapGesture(count:2) { //<- Needed to be first!
-                    selection.removeAll()
-                    selection.insert(item)
+                .onTapGesture(count:2) {
+                    selection = [item]
                     path = item.path
+                    refreshFiles()
+                }
+                .onTapGesture(count:1) {
+                    selection = [item]
                 }
             }
         }
@@ -84,6 +91,7 @@ struct FolderView: View {
     
     func openDir(_ path: URL) {
         self.path = path
+        refreshFiles()
     }
 }
 
