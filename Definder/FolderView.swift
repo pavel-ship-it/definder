@@ -69,19 +69,22 @@ struct FolderView: View {
     var body: some View {
         VStack {
             PathView(path: path, pathAction: openDir)
-            List(listOfFiles, id: \.self, selection: $selection) { item in
-                HStack {
-                    item.icon
-                    Text(item.title)
+            HStack {
+                List(listOfFiles, id: \.self, selection: $selection) { item in
+                    HStack {
+                        item.icon
+                        Text(item.title)
+                    }
+                    .onTapGesture(count:2) {
+                        selection = [item]
+                        path = item.path
+                        refreshFiles()
+                    }
+                    .onTapGesture(count:1) {
+                        selection = [item]
+                    }
                 }
-                .onTapGesture(count:2) {
-                    selection = [item]
-                    path = item.path
-                    refreshFiles()
-                }
-                .onTapGesture(count:1) {
-                    selection = [item]
-                }
+                FileSummaryView(fileManager: fileManager, files: selection)
             }
         }
         .onAppear {
@@ -98,5 +101,19 @@ struct FolderView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         FolderView()
+    }
+}
+
+struct FileSummaryView: View {
+    let fileManager: FileManager
+    let files: Set<ListableFile>
+    
+    var body: some View {
+        VStack {
+            Text("Summmary")
+            List(Array(files)) { item in
+                Text(item.title)
+            }
+        }
     }
 }

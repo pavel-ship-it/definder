@@ -20,7 +20,6 @@ struct DefinderAppView: View {
     var body: some View {
         HStack {
             FolderView()
-            FolderView()
         }
     }
 }
